@@ -1,0 +1,469 @@
+{
+	"info": {
+		"_postman_id": "4993a17f-f067-4964-bec0-9bbae765da9a",
+		"name": "SMS-KPN",
+		"description": "## Send SMS through the KPN network.\n\n---\n\n## [KPN Developer](https://developer.kpn.com/)  \n[Getting Started](https://developer.kpn.com/getting-started)\n\n---\n\nContact Support:  \nName: API Support  \nEmail: [api_developer@kpn.com](mailto:api_developer@kpn.com)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "4406147-4993a17f-f067-4964-bec0-9bbae765da9a"
+	},
+	"item": [
+		{
+			"name": "send",
+			"item": [
+				{
+					"name": "Sends one or more SMS to one or more recipients.",
+					"id": "d5452dd5-27fc-43db-998f-5d4cfc7d72eb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Leave it blank if not applicable.",
+								"key": "SubAccount",
+								"value": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"messages\": [\n    {\n      \"content\": \"Hi from KPN\",\n      \"mobile_number\": \"{{send.mobile_number}}\"\n    }\n  ],\n  \"sender\": \"KPN\",\n  \"webhook_url\": \"\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/send",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"send"
+							]
+						},
+						"description": "Following features are supported- \n * One SMS can be sent to one recipient. \n * One SMS can be sent to multiple recipients, with comma separated list of phone numbers. `Bulk function` \n * Multiple SMS can be sent to single or multiple recipients. Add json object(s) inside messages array to add content for different SMS and mobile_number for single or multiple recipients. Add comma separated list of phone numbers for multiple recipients `Bulk function` \n \n * Delivery receipts (DLRs) for the SMS. DLRs can be received for one or more SMS on one or more webhook URLs. \n \nFollowing number formats are supported- \n * `06`, `+316`, `0031`, `097` \n * messages can be sent globally to mobile phones"
+					},
+					"response": [
+						{
+							"id": "3db8f92f-1539-41c3-9c1e-87d0d862cc5e",
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Leave it blank if not applicable.",
+										"key": "SubAccount",
+										"value": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"messages\": [\n    {\n      \"content\": \"Hi from KPN\",\n      \"mobile_number\": \"{{send.mobile_number}}\"\n    }\n  ],\n  \"sender\": \"KPN\",\n  \"webhook_url\": \"\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/send",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"send"
+									]
+								},
+								"description": "Following features are supported- \n * One SMS can be sent to one recipient. \n * One SMS can be sent to multiple recipients, with comma separated list of phone numbers. `Bulk function` \n * Multiple SMS can be sent to single or multiple recipients. Add json object(s) inside messages array to add content for different SMS and mobile_number for single or multiple recipients. Add comma separated list of phone numbers for multiple recipients `Bulk function` \n \n * Delivery receipts (DLRs) for the SMS. DLRs can be received for one or more SMS on one or more webhook URLs. \n \nFollowing number formats are supported- \n * `06`, `+316`, `0031`, `097` \n * messages can be sent globally to mobile phones"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"document_id\": \"<string>\",\n  \"status\": \"<string>\"\n}"
+						},
+						{
+							"id": "24c128da-fb30-46a6-ba63-01b081a79fbf",
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Leave it blank if not applicable.",
+										"key": "SubAccount",
+										"value": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"messages\": [\n    {\n      \"content\": \"Hi from KPN\",\n      \"mobile_number\": \"{{send.mobile_number}}\"\n    }\n  ],\n  \"sender\": \"KPN\",\n  \"webhook_url\": \"\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/send",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"send"
+									]
+								},
+								"description": "Following features are supported- \n * One SMS can be sent to one recipient. \n * One SMS can be sent to multiple recipients, with comma separated list of phone numbers. `Bulk function` \n * Multiple SMS can be sent to single or multiple recipients. Add json object(s) inside messages array to add content for different SMS and mobile_number for single or multiple recipients. Add comma separated list of phone numbers for multiple recipients `Bulk function` \n \n * Delivery receipts (DLRs) for the SMS. DLRs can be received for one or more SMS on one or more webhook URLs. \n \nFollowing number formats are supported- \n * `06`, `+316`, `0031`, `097` \n * messages can be sent globally to mobile phones"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errorResponse\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"info\": \"<string>\"\n  }\n}"
+						},
+						{
+							"id": "ad02a223-f0bc-4bd2-a64d-a920bb9f2f0b",
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Leave it blank if not applicable.",
+										"key": "SubAccount",
+										"value": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"messages\": [\n    {\n      \"content\": \"Hi from KPN\",\n      \"mobile_number\": \"{{send.mobile_number}}\"\n    }\n  ],\n  \"sender\": \"KPN\",\n  \"webhook_url\": \"\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/send",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"send"
+									]
+								},
+								"description": "Following features are supported- \n * One SMS can be sent to one recipient. \n * One SMS can be sent to multiple recipients, with comma separated list of phone numbers. `Bulk function` \n * Multiple SMS can be sent to single or multiple recipients. Add json object(s) inside messages array to add content for different SMS and mobile_number for single or multiple recipients. Add comma separated list of phone numbers for multiple recipients `Bulk function` \n \n * Delivery receipts (DLRs) for the SMS. DLRs can be received for one or more SMS on one or more webhook URLs. \n \nFollowing number formats are supported- \n * `06`, `+316`, `0031`, `097` \n * messages can be sent globally to mobile phones"
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errorResponse\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"info\": \"<string>\"\n  }\n}"
+						},
+						{
+							"id": "4bde4148-8293-43f5-b7fe-918e4db23dba",
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Leave it blank if not applicable.",
+										"key": "SubAccount",
+										"value": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"messages\": [\n    {\n      \"content\": \"Hi from KPN\",\n      \"mobile_number\": \"{{send.mobile_number}}\"\n    }\n  ],\n  \"sender\": \"KPN\",\n  \"webhook_url\": \"\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/send",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"send"
+									]
+								},
+								"description": "Following features are supported- \n * One SMS can be sent to one recipient. \n * One SMS can be sent to multiple recipients, with comma separated list of phone numbers. `Bulk function` \n * Multiple SMS can be sent to single or multiple recipients. Add json object(s) inside messages array to add content for different SMS and mobile_number for single or multiple recipients. Add comma separated list of phone numbers for multiple recipients `Bulk function` \n \n * Delivery receipts (DLRs) for the SMS. DLRs can be received for one or more SMS on one or more webhook URLs. \n \nFollowing number formats are supported- \n * `06`, `+316`, `0031`, `097` \n * messages can be sent globally to mobile phones"
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errorResponse\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"info\": \"<string>\"\n  }\n}"
+						},
+						{
+							"id": "70d72af7-f1a9-44ec-aa4c-e59f4d2c6060",
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Leave it blank if not applicable.",
+										"key": "SubAccount",
+										"value": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"messages\": [\n    {\n      \"content\": \"Hi from KPN\",\n      \"mobile_number\": \"{{send.mobile_number}}\"\n    }\n  ],\n  \"sender\": \"KPN\",\n  \"webhook_url\": \"\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/send",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"send"
+									]
+								},
+								"description": "Following features are supported- \n * One SMS can be sent to one recipient. \n * One SMS can be sent to multiple recipients, with comma separated list of phone numbers. `Bulk function` \n * Multiple SMS can be sent to single or multiple recipients. Add json object(s) inside messages array to add content for different SMS and mobile_number for single or multiple recipients. Add comma separated list of phone numbers for multiple recipients `Bulk function` \n \n * Delivery receipts (DLRs) for the SMS. DLRs can be received for one or more SMS on one or more webhook URLs. \n \nFollowing number formats are supported- \n * `06`, `+316`, `0031`, `097` \n * messages can be sent globally to mobile phones"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errorResponse\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"info\": \"<string>\"\n  }\n}"
+						},
+						{
+							"id": "2c41ffb8-8174-4bcf-9583-0056631ef571",
+							"name": "Server Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Leave it blank if not applicable.",
+										"key": "SubAccount",
+										"value": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"messages\": [\n    {\n      \"content\": \"Hi from KPN\",\n      \"mobile_number\": \"{{send.mobile_number}}\"\n    }\n  ],\n  \"sender\": \"KPN\",\n  \"webhook_url\": \"\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/send",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"send"
+									]
+								},
+								"description": "Following features are supported- \n * One SMS can be sent to one recipient. \n * One SMS can be sent to multiple recipients, with comma separated list of phone numbers. `Bulk function` \n * Multiple SMS can be sent to single or multiple recipients. Add json object(s) inside messages array to add content for different SMS and mobile_number for single or multiple recipients. Add comma separated list of phone numbers for multiple recipients `Bulk function` \n \n * Delivery receipts (DLRs) for the SMS. DLRs can be received for one or more SMS on one or more webhook URLs. \n \nFollowing number formats are supported- \n * `06`, `+316`, `0031`, `097` \n * messages can be sent globally to mobile phones"
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"errorResponse\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\",\n    \"info\": \"<string>\"\n  }\n}"
+						}
+					]
+				}
+			],
+			"id": "a4c46842-6e5f-429d-bdaa-45e36a7a4798"
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "client_authentication",
+				"value": "body",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "{{client_secret}}",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{client_id}}",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://api-prd.kpn.com/oauth/client_credential/accesstoken?grant_type=client_credentials",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "client_credentials",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "access_token",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f9108f4e-bac9-455f-b8ba-196278a35191",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a12d1d83-318a-4225-886f-7969d4d20d40",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "0b81e6d7-e7e8-4ddf-8bd3-6e842267cb1b",
+			"key": "baseUrl",
+			"value": "https://api-prd.kpn.com/communication/kpn/sms"
+		},
+		{
+			"id": "99ea051f-e617-4cce-a24d-a34f35cc4ad0",
+			"key": "client_id",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "fa23e15b-e87b-49c8-b4e5-8e811203190a",
+			"key": "client_secret",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "1bacfeb1-cc94-4d97-a831-b9f3171f1c28",
+			"key": "send.mobile_number",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
