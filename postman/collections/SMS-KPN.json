@@ -423,7 +423,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "f9108f4e-bac9-455f-b8ba-196278a35191",
+				"id": "91774f94-aa88-4473-a4d3-c6d2776fffdf",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -433,7 +433,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "a12d1d83-318a-4225-886f-7969d4d20d40",
+				"id": "cf1a6ae4-909f-4c99-b7df-9154d6dd81af",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -443,25 +443,31 @@
 	],
 	"variable": [
 		{
-			"id": "0b81e6d7-e7e8-4ddf-8bd3-6e842267cb1b",
+			"id": "b445ecb9-3524-4a39-80a2-af17a825c319",
 			"key": "baseUrl",
 			"value": "https://api-prd.kpn.com/communication/kpn/sms"
 		},
 		{
-			"id": "99ea051f-e617-4cce-a24d-a34f35cc4ad0",
+			"id": "0a736cac-3847-4776-a313-f0ef5883397e",
 			"key": "client_id",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "fa23e15b-e87b-49c8-b4e5-8e811203190a",
+			"id": "c3cd5e95-4f48-4f7f-b741-fa380e3adbfa",
 			"key": "client_secret",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "1bacfeb1-cc94-4d97-a831-b9f3171f1c28",
+			"id": "ac6e0843-6893-4624-a197-fe934f08e84a",
 			"key": "send.mobile_number",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "37db670c-d821-4bfd-8d3f-48868980dac0",
+			"key": "send.to.mobile_number",
 			"value": "",
 			"type": "string"
 		}
