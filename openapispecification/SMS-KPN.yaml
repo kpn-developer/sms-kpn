@@ -2,7 +2,7 @@
 swagger: "2.0"
 info:
   description: "Send SMS through the KPN network.\n---\n    \n## [KPN Developer](https://developer.kpn.com/)<br/> [Getting Started](https://developer.kpn.com/getting-started)\n\n---"
-  version: 1.0.5
+  version: 1.0.6
   title: SMS - KPN
   termsOfService: https://developer.kpn.com/legal
   contact:
