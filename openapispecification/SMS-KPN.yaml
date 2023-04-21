@@ -20,7 +20,7 @@ produces:
 paths:
   /send:
     post:
-      summary: Sends one or more SMS to one or more recipients.
+      summary: Sends one or more SMS to one or more recipients .
       description: "Following features are supported- \n * One SMS can be sent to one recipient. \n * One SMS can be sent to multiple recipients, with comma separated list of phone numbers. `Bulk function` \n * Multiple SMS can be sent to single or multiple recipients. Add json object(s) inside messages array to add content for different SMS and mobile_number for single or multiple recipients. Add comma separated list of phone numbers for multiple recipients `Bulk function` \n \n * Delivery receipts (DLRs) for the SMS. DLRs can be received for one or more SMS on one or more webhook URLs. \n \nFollowing number formats are supported- \n * `06`, `+316`, `0031`, `097` \n * messages can be sent globally to mobile phones"
       operationId: Sends single or bulk SMS
       parameters:
